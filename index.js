@@ -1,8 +1,12 @@
-const express = require('express')
-const app = express()
-app.set('port', process.env.PORT || 3000);
-app.get('/', (req, res) => 
-    res.send('Hello World!')
-)
+const express = require('express');
+const app = express();
 
-app.listen(port);
+app.get('/', (req, res) => {
+  const name = process.env.NAME || 'World';
+  res.send(`Hello ${name}!`);
+});
+
+const port = parseInt(process.env.PORT) || 8080;
+app.listen(port, () => {
+  console.log(`helloworld: listening on port ${port}`);
+});
