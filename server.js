@@ -3,7 +3,7 @@ const app = express();
 
 app.get('/', (req, res) => {
         var dessert = 'hello';
-        console.log(__dirname + "index.ejs")
+        console.log(__dirname + "/src/index.ejs")
         // res.render(__dirname + "index.ejs", {dessert:dessert});
 });
 
